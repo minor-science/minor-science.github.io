@@ -1,0 +1,7 @@
+# Search engines and AI crawlers are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://minor-science.github.io/sitemap.xml
+Sitemap: https://minor-science.github.io/nomadology-reference/sitemap.xml
+Sitemap: https://minor-science.github.io/thousand-plateaus-reader/sitemap.xml

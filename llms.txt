@@ -1,0 +1,19 @@
+# Minor science
+
+> Tools and references by Andrew Culp (California Institute of the Arts) for working with nomadology, the theory set out by Gilles Deleuze and Félix Guattari in plateaus 12 and 13 of A Thousand Plateaus (1980): "1227: Treatise on Nomadology—The War Machine" and "7000 B.C.: Apparatus of Capture."
+
+In A Thousand Plateaus, Deleuze and Guattari call "minor" or "nomad" science the kind of knowledge that follows its material and poses problems, as opposed to the royal science of the State, which reproduces and extracts constants. These projects work with nomadology in that spirit, by building things that can be tested against the plateaus and against the research on which they drew. Page numbers cite Brian Massumi's English translation (University of Minnesota Press, 1987); the French is Mille plateaux (Minuit, 1980).
+
+## Pages
+
+- [Minor science: tools for Deleuze and Guattari's nomadology](https://minor-science.github.io/): Tools and references for working with Deleuze and Guattari's nomadology: simulations, reference sheets, and a reader for A Thousand Plateaus.
+
+## Related
+
+- [Minor science](https://minor-science.github.io/): all the projects
+- [Nomadology Visualizer](https://nomad-viz.vercel.app/): physical simulations of the plateaus' processes
+- [Nomadology reference](https://minor-science.github.io/nomadology-reference/): reference sheets on plateaus 12 and 13
+- [A Thousand Plateaus reader](https://minor-science.github.io/thousand-plateaus-reader/reader.html): French and English, sentence by sentence
+- [Source code](https://github.com/minor-science): GitHub organization
+- [Andrew Culp](https://andrewculp.org/): author
+- [an.archeology](https://www.instagram.com/an.archeology/): the author's current project, depicting Anarcheology of Power
