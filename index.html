@@ -39,7 +39,7 @@
  },
  "inLanguage": "en",
  "keywords": "Deleuze, Guattari, A Thousand Plateaus, nomadology, Treatise on Nomadology, Apparatus of Capture, war machine, nomad science, minor science",
- "dateModified": "2026-10-29",
+ "dateModified": "2026-10-30",
  "image": "https://minor-science.github.io/og.png",
  "@type": [
   "WebSite",
@@ -133,142 +133,126 @@
 <!--/seo-->
 <link rel="stylesheet" href="https://use.typekit.net/hkq4frz.css">
 <style>
-/* Hachimura's poster-as-machine on Levine's copy paper, with Xu's stations.
-   Black and one red. Figure 1 is a halftone of the running model; 2 and 3 are drawn. */
-:root{--field:#0b0b0b;--paper:#f8f7f2;--ink:#121212;--red:#c8361a;--grey:#4f4d48;--focus:#0047ff;
-  --grot:"comma-sans",Helvetica,Arial,sans-serif;
-  --serif:"warbler-text",Georgia,serif;--mono:"new-science-mono",ui-monospace,monospace}
+/* Copy paper on a black field, black and one red. Comma Sans titles, solid against outline;
+   Warbler for reading, switching into New Science Mono mid-sentence, as in Levine's BookMarx. */
+:root{--field:#0b0b0b;--paper:#f8f7f2;--ink:#121212;--red:#c8361a;--grey:#55534e;--focus:#0047ff;
+  --grot:"comma-sans",Helvetica,Arial,sans-serif;--serif:"warbler-text",Georgia,serif;--mono:"new-science-mono",ui-monospace,monospace}
 *{box-sizing:border-box}
 html{background:var(--field);font-synthesis:none}
-body{margin:0;background:var(--field);color:var(--ink);font:400 1.0625rem/1.5 var(--serif);padding:clamp(12px,3vw,48px)}
+body{margin:0;background:var(--field);color:var(--ink);font:400 1.125rem/1.5 var(--serif);padding:clamp(12px,3vw,48px)}
 a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
 a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.o{color:transparent;-webkit-text-stroke:var(--sw,2px) var(--ink)}
+.tw{font:400 1.18em/1.25 var(--mono);letter-spacing:-.02em}
 
-/* The sheet: flat copy paper on a black field */
-.sheet{max-width:78rem;margin:0 auto;position:relative;background-color:var(--paper)}
-.poster{padding:clamp(16px,3.2vw,44px);display:grid;gap:clamp(.75rem,1.5vw,1.25rem);grid-template-columns:repeat(12,minmax(0,1fr))}
-.poster>*{min-width:0}
-.mono{font:400 .875rem/1.3 var(--mono)}
+.sheet{max-width:80rem;margin:0 auto;background:var(--paper);padding:clamp(18px,3.4vw,52px);overflow:hidden;
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(.75rem,2vw,1.75rem)}
+.sheet>*{min-width:0}
 
-/* Title */
-h1{grid-column:1/-1;margin:0;font:700 clamp(3.2rem,24.5vw,21.5rem)/.8 var(--grot);letter-spacing:-.045em;text-transform:uppercase;display:grid;grid-template-columns:auto 1fr;align-items:end}
-h1 .a{grid-row:1/3;font-size:1.32em;line-height:.76;position:relative}
-h1 .b{color:transparent;-webkit-text-stroke:2.5px var(--ink);padding-left:.04em}
+h1{grid-column:1/-1;margin:0;font:700 clamp(3.2rem,24.5vw,21.5rem)/.8 var(--grot);letter-spacing:-.045em;text-transform:uppercase;
+  display:grid;grid-template-columns:auto 1fr;align-items:end;--sw:2.5px}
+h1 .a{grid-row:1/3;font-size:1.32em;line-height:.76}
+h1 .b{padding-left:.04em}
 h1 .c{grid-column:1/-1}
-.ticks{grid-column:1/-1;height:10px;margin-top:-.25rem;background:repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 12px);opacity:.6}
 
-.lede{grid-column:1/6;margin:0;font:400 1.125rem/1.5 var(--serif)}
-.epi{grid-column:6/13;margin:0}
-.epi p{margin:0;font:400 clamp(1.4rem,2.6vw,2.1rem)/1.2 var(--mono);letter-spacing:-.01em}
-.epi p b{color:var(--red);font-weight:inherit}
-.epi cite{display:block;margin-top:.6rem;font-style:normal}
+.lede{grid-column:1/8;margin:clamp(1.5rem,3vw,2.5rem) 0 0;font-size:clamp(1.2rem,1.6vw,1.4rem);line-height:1.45}
+.epi{grid-column:8/13;margin:clamp(1.5rem,3vw,2.5rem) 0 0;align-self:end}
+.epi p{margin:0;font:400 clamp(1.5rem,2.8vw,2.4rem)/1.12 var(--mono);letter-spacing:-.02em}
+.epi p b{color:var(--red);font-weight:400}
+.epi cite{display:block;margin-top:.7rem;font:italic 400 1rem/1.3 var(--serif)}
 
-
-/* Figures */
-.p{grid-column:span 4;border-top:2px solid var(--ink);padding-top:.8rem;display:flex;flex-direction:column;gap:.85rem}
-.p .lab{display:flex;justify-content:space-between;gap:1rem}
-.plate{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
-.plate{box-shadow:inset 0 0 0 1.5px var(--ink)}
-.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
-.plate svg{position:absolute;inset:6% 6% auto auto;width:62%;height:auto;mix-blend-mode:multiply;overflow:visible}
-.plate.drawn svg{inset:10% 8%;width:84%}
-.p h2{margin:0;font:700 clamp(1.6rem,2.6vw,2.15rem)/1 var(--grot);letter-spacing:-.025em}
-.p h2 a{text-decoration:none}
-.p h2 a:hover{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:3px}
-.p p{margin:0}
-.p .d{font:400 1.0625rem/1.5 var(--serif)}
-
-/* Stations, with dotted leaders */
-.st{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-.st li{display:flex;align-items:baseline;gap:.4rem;padding:.38rem 0;border-bottom:1px solid rgba(0,0,0,.18)}
-.st{font-family:var(--serif)}
-.st a{text-decoration:none;font-size:1.0625rem}
+/* Projects alternate sides; the figure is big and unboxed, its numeral printed over it */
+.proj{grid-column:1/-1;display:grid;grid-template-columns:subgrid;align-items:center;margin-top:clamp(3.5rem,8vw,7rem)}
+.fig{grid-column:1/8;position:relative;margin:0}
+.txt{grid-column:8/13}
+.proj.flip .fig{grid-column:6/13;grid-row:1}
+.proj.flip .txt{grid-column:1/6;grid-row:1}
+.fig img,.fig>svg{display:block;width:100%;height:auto}
+.fig img{mix-blend-mode:multiply}
+.num{position:absolute;top:-.32em;left:-.06em;z-index:2;pointer-events:none;
+  font:700 clamp(7rem,17vw,15rem)/1 var(--grot);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+.proj.flip .num{left:auto;right:-.02em}
+.txt h2{margin:0 0 1rem;font:700 clamp(2.3rem,4.4vw,3.9rem)/.9 var(--grot);letter-spacing:-.04em;--sw:1.6px}
+.txt h2 a{text-decoration:none}
+.txt h2 a:hover{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:4px}
+.txt p{margin:0}
+.st{margin:1.25rem 0 0!important;font-size:1.1875rem;line-height:1.7}
+.st a{text-decoration:none;margin-right:.6em;white-space:nowrap}
 .st a:hover{text-decoration:underline;text-decoration-color:var(--red)}
-.st i{flex:1;border-bottom:2px dotted var(--ink);opacity:.5;transform:translateY(-.25em);min-width:1rem}
-.st span{font:400 .875rem/1 var(--mono);color:var(--grey);white-space:nowrap}
-.f{font:400 .9375rem/1.4 var(--mono)}
-.f a{margin-right:1.4rem}
+.st sup{font:400 .62em/0 var(--mono);color:var(--red);margin-left:.15em;letter-spacing:0}
+.f{margin-top:1.1rem!important;font:400 1rem/1.4 var(--mono)}
+.f a{margin-right:1.5rem}
 
-footer{grid-column:1/-1;border-top:2px solid var(--ink);padding:.9rem 0 .4rem;margin-top:1rem;display:grid;gap:1.5rem 3rem;grid-template-columns:1fr 1fr;font:400 1rem/1.45 var(--serif)}
-footer h2{margin:0 0 .6rem;font:400 .9375rem/1 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.08em;color:var(--red)}
+footer{grid-column:1/-1;margin-top:clamp(4rem,8vw,7rem);padding-top:1rem;border-top:2px solid var(--ink);
+  display:grid;grid-template-columns:subgrid;row-gap:1.5rem;font-size:1rem;line-height:1.45}
+footer>div:first-child{grid-column:1/7}
+footer>div:last-child{grid-column:8/13}
+footer h2{margin:0 0 .7rem;font:400 1rem/1 var(--serif);font-variant-caps:all-small-caps;letter-spacing:.08em;color:var(--red)}
 footer p{margin:0 0 .6rem}
 footer .reading span{display:block;padding-left:1.25em;font-size:.9375rem}
-@media (max-width:860px){footer{grid-template-columns:1fr}}
 
 @media (max-width:860px){
-  .lede,.epi,.p{grid-column:1/-1}
+  .lede,.epi,.fig,.txt,.proj.flip .fig,.proj.flip .txt,footer>div:first-child,footer>div:last-child{grid-column:1/-1;grid-row:auto}
+  .proj{row-gap:1.5rem}
+  .num{font-size:7rem}
 }
 </style></head>
 <body>
+<div class="sheet">
 
-<div class="sheet"><div class="poster">
+<h1><span class="vh">Minor science</span><span class="a" aria-hidden="true">Mi</span><span class="b o" aria-hidden="true">nor</span><span class="c" aria-hidden="true">Science</span></h1>
 
-<h1><span class="vh">Minor science</span><span class="a" aria-hidden="true">Mi</span><span class="b" aria-hidden="true">nor</span><span class="c" aria-hidden="true">Science</span></h1>
-<div class="ticks" aria-hidden="true"></div>
+<p class="lede">In <i>A Thousand Plateaus</i> (1980), Deleuze and Guattari call "minor" or "nomad" science the kind of knowledge that <span class="tw">follows its material and poses problems,</span> as opposed to the royal science of the State, which reproduces and extracts constants. These projects work with nomadology in that spirit, by building things that can be tested against the plateaus and <span class="tw">against the research on which they drew.</span></p>
+<blockquote class="epi"><p>"<b>Following</b> is not at all the same thing as reproducing."</p><cite>Deleuze and Guattari, A Thousand Plateaus, 372</cite></blockquote>
 
-<p class="lede">In <i>A Thousand Plateaus</i> (1980), Deleuze and Guattari call "minor" or "nomad" science the kind of knowledge that follows its material and poses problems, as opposed to the royal science of the State, which reproduces and extracts constants. These projects work with nomadology in that spirit, by building things that can be tested against the plateaus and against the research on which they drew.</p>
-<blockquote class="epi"><p>"<b>Following</b> is not at all the same thing as reproducing."</p><cite class="mono">Deleuze and Guattari, A Thousand Plateaus, 372</cite></blockquote>
-
-<section class="p" aria-labelledby="p1">
-<div class="lab mono"><span>[1]</span><span>Laminar, vortical, 371-72</span></div>
-<div class="plate"><img src="img/zine/viz-metallurgic.png" alt="Halftone of the metallurgic model running: clusters of captured stock and scattered groups." loading="lazy">
-<svg viewBox="0 0 300 150" aria-hidden="true" fill="none" stroke="#c8361a" stroke-width="2.5">
+<section class="proj" aria-labelledby="p1">
+<figure class="fig"><span class="num" aria-hidden="true">1</span>
+<img src="img/zine/viz-metallurgic.png" width="900" height="600" alt="Halftone of the metallurgic model running: clusters of captured stock and scattered groups." loading="lazy">
+<svg viewBox="0 0 300 150" aria-hidden="true" fill="none" stroke="#c8361a" stroke-width="2.5" style="position:absolute;top:8%;right:4%;width:58%;mix-blend-mode:multiply">
 <path d="M0 30 H120 M0 50 H120 M0 70 H120 M0 90 H120 M0 110 H120"/>
 <path d="M120 30 C160 30 180 40 196 60 M120 50 C150 50 168 58 180 70 M120 90 C150 90 168 82 180 74 M120 110 C160 110 182 100 196 82"/>
 <path d="M232 72 m-4 0 a4 4 0 1 1 8 0 a10 10 0 1 1 -20 0 a16 16 0 1 1 32 0 a24 24 0 1 1 -48 0 a32 32 0 1 1 64 0"/>
-</svg></div>
-<h2 id="p1"><a href="https://nomad-viz.vercel.app">Nomadology visualizer</a></h2>
-<p class="d">Physical simulations of the processes Deleuze and Guattari describe in plateaus 12 and 13, from capture to warding off and the war machine, played out in four materials (crystals, a liquid, sound, gravity).</p>
-<ul class="st">
-<li><a href="https://nomad-viz.vercel.app/?model=metallurgic">Metallurgic</a><i></i><span>crystallization</span></li>
-<li><a href="https://nomad-viz.vercel.app/?model=hydraulic">Hydraulic</a><i></i><span>liquid</span></li>
-<li><a href="https://nomad-viz.vercel.app/?model=acoustic">Acoustic</a><i></i><span>resonance</span></li>
-<li><a href="https://nomad-viz.vercel.app/?model=cosmic">Cosmic</a><i></i><span>gravity</span></li>
-</ul>
+</svg></figure>
+<div class="txt">
+<h2 id="p1"><a href="https://nomad-viz.vercel.app">Nomadology <span class="o">visualizer</span></a></h2>
+<p>Physical simulations of the processes Deleuze and Guattari describe in plateaus 12 and 13, from capture to warding off and the war machine, <span class="tw">played out in four materials</span> (crystals, a liquid, sound, gravity).</p>
+<p class="st"><a href="https://nomad-viz.vercel.app/?model=metallurgic">Metallurgic<sup>crystallization</sup></a> <a href="https://nomad-viz.vercel.app/?model=hydraulic">Hydraulic<sup>liquid</sup></a> <a href="https://nomad-viz.vercel.app/?model=acoustic">Acoustic<sup>resonance</sup></a> <a href="https://nomad-viz.vercel.app/?model=cosmic">Cosmic<sup>gravity</sup></a></p>
 <p class="f"><a href="https://nomad-viz.vercel.app">Open</a><a href="https://github.com/minor-science/nomad-viz">Source</a></p>
+</div>
 </section>
 
-<section class="p" aria-labelledby="p2">
-<div class="lab mono"><span>[2]</span><span>Axioms, propositions, 351-473</span></div>
-<div class="plate drawn" aria-hidden="true">
+<section class="proj flip" aria-labelledby="p2">
+<figure class="fig" aria-hidden="true"><span class="num">2</span>
 <svg viewBox="0 0 300 200" fill="none" stroke="#121212" stroke-width="1.5">
 <rect x="1" y="10" width="298" height="180"/>
 <path d="M1 36 H299 M60 10 V190 M120 10 V190 M180 10 V190 M240 10 V190 M1 80 H299 M1 124 H299 M1 160 H299"/>
 <path d="M66 50 H112 M66 60 H104 M126 50 H170 M126 60 H160 M186 50 H232 M186 60 H226 M246 50 H290 M246 60 H280 M66 94 H110 M126 94 H168 M186 94 H230 M246 94 H286 M66 104 H98 M186 104 H214 M66 138 H108 M126 138 H156 M246 138 H284 M126 148 H170 M66 174 H100 M186 174 H226"/>
 <path d="M126 86 h48 v32 h-48 z M246 130 h46 v24 h-46 z" stroke-dasharray="3 3"/>
 <path d="M90 2 V-8 H270 V2 M150 -8 V-14" stroke="#c8361a" stroke-width="2.5"/>
-</svg></div>
-<h2 id="p2"><a href="https://minor-science.github.io/nomadology-reference/">Nomadology reference</a></h2>
-<p class="d">Reference sheets on the "Treatise on Nomadology" and "Apparatus of Capture": every axiom and proposition by page, along with the five machinic processes, royal and nomad science, the State's forms and the works cited in Deleuze and Guattari's notes.</p>
-<ul class="st">
-<li><a href="https://minor-science.github.io/nomadology-reference/plateaus_reference.html">Entry by entry</a><i></i><span>351-473</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/two_sciences.html">Two sciences</a><i></i><span>361-74</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/five_processes.html">Five machinic processes</a><i></i><span>430-37</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/state_forms.html">The State's three forms</a><i></i><span>459</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/concordance.html">Concordance</a><i></i><span>concepts</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/after1980.html">After 1980</a><i></i><span>the record</span></li>
-<li><a href="https://minor-science.github.io/nomadology-reference/library.html">The plateaus' library</a><i></i><span>552-71</span></li>
-</ul>
+</svg></figure>
+<div class="txt">
+<h2 id="p2"><a href="https://minor-science.github.io/nomadology-reference/">Nomadology <span class="o">reference</span></a></h2>
+<p>Reference sheets on the "Treatise on Nomadology" and "Apparatus of Capture": <span class="tw">every axiom and proposition by page,</span> along with the five machinic processes, royal and nomad science, the State's forms and the works cited in Deleuze and Guattari's notes.</p>
+<p class="st"><a href="https://minor-science.github.io/nomadology-reference/plateaus_reference.html">Entry by entry<sup>351-473</sup></a> <a href="https://minor-science.github.io/nomadology-reference/two_sciences.html">Two sciences<sup>361-74</sup></a> <a href="https://minor-science.github.io/nomadology-reference/five_processes.html">Five machinic processes<sup>430-37</sup></a> <a href="https://minor-science.github.io/nomadology-reference/state_forms.html">The State's three forms<sup>459</sup></a> <a href="https://minor-science.github.io/nomadology-reference/concordance.html">Concordance<sup>concepts</sup></a> <a href="https://minor-science.github.io/nomadology-reference/after1980.html">After 1980<sup>the record</sup></a> <a href="https://minor-science.github.io/nomadology-reference/library.html">The plateaus' library<sup>552-71</sup></a></p>
 <p class="f"><a href="https://minor-science.github.io/nomadology-reference/">Open</a><a href="https://github.com/minor-science/nomadology-reference">Source</a></p>
+</div>
 </section>
 
-<section class="p" aria-labelledby="p3">
-<div class="lab mono"><span>[3]</span><span>Minuit, Minnesota, annotated</span></div>
-<div class="plate drawn" aria-hidden="true">
+<section class="proj" aria-labelledby="p3">
+<figure class="fig" aria-hidden="true"><span class="num">3</span>
 <svg viewBox="0 0 300 200" fill="none" stroke="#121212" stroke-width="1.5">
 <path d="M10 20 H80 M10 32 H86 M10 44 H70 M10 70 H84 M10 82 H76 M10 94 H62 M10 120 H86 M10 132 H64 M10 158 H80 M10 170 H72"/>
 <path d="M115 20 H185 M115 32 H178 M115 44 H190 M115 56 H160 M115 82 H182 M115 94 H170 M115 120 H186 M115 132 H176 M115 144 H150 M115 170 H184"/>
 <path d="M220 20 H290 M220 32 H284 M220 44 H276 M220 56 H288 M220 68 H252 M220 94 H270 M220 106 H290 M220 132 H280 M220 144 H260 M220 170 H286 M220 182 H244"/>
 <path d="M88 44 H113 M88 94 C100 94 102 94 113 94 M88 132 C100 132 102 144 113 144 M88 170 H113 M192 56 C204 56 206 68 218 68 M192 94 C204 94 206 106 218 106 M192 144 H218 M192 170 C204 170 206 182 218 182" stroke="#c8361a" stroke-width="2.5"/>
-</svg></div>
-<h2 id="p3"><a href="https://minor-science.github.io/thousand-plateaus-reader/">A Thousand Plateaus reader</a></h2>
-<p class="d">Plateaus 12 and 13 in the Minuit French and Massumi's English, lined up sentence by sentence beside an annotated translation, with glosses, Massumi's endnotes and a lexicon of terms.</p>
-<ul class="st">
-<li><a href="https://minor-science.github.io/thousand-plateaus-reader/reader.html#12-1">Plateau 12, Treatise on Nomadology</a><i></i><span>351-423</span></li>
-<li><a href="https://minor-science.github.io/thousand-plateaus-reader/reader.html#13-1">Plateau 13, Apparatus of Capture</a><i></i><span>424-73</span></li>
-</ul>
+</svg></figure>
+<div class="txt">
+<h2 id="p3"><a href="https://minor-science.github.io/thousand-plateaus-reader/">A Thousand Plateaus <span class="o">reader</span></a></h2>
+<p>Plateaus 12 and 13 in the Minuit French and Massumi's English, lined up <span class="tw">sentence by sentence</span> beside an annotated translation, with glosses, Massumi's endnotes and a lexicon of terms.</p>
+<p class="st"><a href="https://minor-science.github.io/thousand-plateaus-reader/reader.html#12-1">Plateau 12, Treatise on Nomadology<sup>351-423</sup></a> <a href="https://minor-science.github.io/thousand-plateaus-reader/reader.html#13-1">Plateau 13, Apparatus of Capture<sup>424-73</sup></a></p>
 <p class="f"><a href="https://minor-science.github.io/thousand-plateaus-reader/">Open</a><a href="https://github.com/minor-science/thousand-plateaus-reader">Source</a></p>
+</div>
 </section>
 
 <footer>
@@ -280,5 +264,5 @@ footer .reading span{display:block;padding-left:1.25em;font-size:.9375rem}
 <p>Made by <a href="https://andrewculp.org/">Andrew Culp</a>, California Institute of the Arts. Typefaces include Warbler, Comma Sans and New Science Mono. Source code at <a href="https://github.com/minor-science">github.com/minor-science</a>.</p>
 <p>Current project: <a href="https://www.instagram.com/an.archeology/">an.archeology</a></p></div>
 </footer>
-</div></div>
+</div>
 </body></html>
