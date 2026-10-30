@@ -136,7 +136,7 @@
 /* Copy paper on a black field, black and one red. Comma Sans titles, solid against outline;
    Warbler for reading, switching into New Science Mono mid-sentence, as in Levine's BookMarx. */
 :root{--field:#0b0b0b;--paper:#f8f7f2;--ink:#121212;--red:#c8361a;--grey:#55534e;--focus:#0047ff;
-  --grot:"comma-sans",Helvetica,Arial,sans-serif;--serif:"warbler-text",Georgia,serif;--mono:"new-science-mono",ui-monospace,monospace}
+  --disp:"megascope-variable","Arial Narrow",sans-serif;--head:"at-kyrios-display","Arial Narrow",serif;--serif:"warbler-text",Georgia,serif;--mono:"new-science-mono",ui-monospace,monospace}
 *{box-sizing:border-box}
 html{background:var(--field);font-synthesis:none}
 body{margin:0;background:var(--field);color:var(--ink);font:400 1.125rem/1.5 var(--serif);padding:clamp(12px,3vw,48px)}
@@ -150,7 +150,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
   display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(.75rem,2vw,1.75rem)}
 .sheet>*{min-width:0}
 
-h1{grid-column:1/-1;margin:0;font:700 clamp(3.2rem,24.5vw,21.5rem)/.8 var(--grot);letter-spacing:-.045em;text-transform:uppercase;
+h1{grid-column:1/-1;margin:0;font:700 clamp(2.3rem,38.8vw,34.3rem)/.8 var(--disp);letter-spacing:-.02em;text-transform:uppercase;
   display:grid;grid-template-columns:auto 1fr;align-items:end;--sw:2.5px}
 h1 .a{grid-row:1/3;font-size:1.32em;line-height:.76}
 h1 .b{padding-left:.04em}
@@ -171,9 +171,9 @@ h1 .c{grid-column:1/-1}
 .fig img,.fig>svg{display:block;width:100%;height:auto}
 .fig img{mix-blend-mode:multiply}
 .num{position:absolute;top:-.32em;left:-.06em;z-index:2;pointer-events:none;
-  font:700 clamp(7rem,17vw,15rem)/1 var(--grot);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:2.5px var(--ink)}
+  font:700 clamp(7rem,17vw,15rem)/1 var(--disp);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2.5px var(--ink)}
 .proj.flip .num{left:auto;right:-.02em}
-.txt h2{margin:0 0 1rem;font:700 clamp(2.3rem,4.4vw,3.9rem)/.9 var(--grot);letter-spacing:-.04em;--sw:1.6px}
+.txt h2{margin:0 0 1rem;font:700 clamp(2.6rem,5vw,4.4rem)/.88 var(--head);letter-spacing:0;--sw:1.6px}
 .txt h2 a{text-decoration:none}
 .txt h2 a:hover{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:4px}
 .txt p{margin:0}
@@ -261,7 +261,7 @@ footer .reading span{display:block;padding-left:1.25em;font-size:.9375rem}
 <p><i>Mille plateaux</i><span>Gilles Deleuze and Félix Guattari. Minuit, 1980</span></p>
 <p><i>Regimes of Violence: Toward a Political Anthropology</i><span>John Protevi. Minnesota, 2025</span></p></div>
 <div class="colophon"><h2>Colophon</h2>
-<p>Made by <a href="https://andrewculp.org/">Andrew Culp</a>, California Institute of the Arts. Typefaces include Warbler, Comma Sans and New Science Mono. Source code at <a href="https://github.com/minor-science">github.com/minor-science</a>.</p>
+<p>Made by <a href="https://andrewculp.org/">Andrew Culp</a>, California Institute of the Arts. Typefaces include Megascope, AT Kyrios, Warbler and New Science Mono. Source code at <a href="https://github.com/minor-science">github.com/minor-science</a>.</p>
 <p>Current project: <a href="https://www.instagram.com/an.archeology/">an.archeology</a></p></div>
 </footer>
 </div>
